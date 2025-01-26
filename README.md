@@ -16,13 +16,16 @@
    search google (mysql download) go to mysql communicaty download > mysql yum repository > copy link address.
 
    wget (https://dev.mysql.com/get/mysql84-community-release-el9-1.noarch.rpm) 
-   ls
-   dnf install mysql84-community-release-el9-1.noarch.rpm -yum
+
+   ls 
+
+   dnf install mysql84-community-release-el9-1.noarch.rpm 
+   
    dnf install mysql-community-server -y                     //here is install mysqlclient 
+
    systemctl start mysqld
    
-   cat /var/log/mysqld.log | grep 'password'             //to show the mysqld password
-   copy password 
+   cat /var/log/mysqld.log | grep 'password'             //to show the mysqld password copy password 
 
    mysql -u root -p(paste password)
  
@@ -32,10 +35,15 @@
    { AGAIN RUN THIS COMMAND AND PROVIDE THIS NEW PASSWORD} 
 
    mysql -u root -pAdmin@1234    //(enter the mysql)
-   show databases;
-   then --> create database student;
-   use database; //command RUN
+
+   show databases; 
+
+   then --> create database student; 
+
+   use database; //command RUN 
+
    {TO PROVIDE FILE IN (student.sql) COPY DATA ALL PASTE mysql> here } 
+
    // exit 
 
 ### Step 2: Change Configuration
@@ -58,8 +66,10 @@
 
 ### Step 4:  Install Apache Tomcat 8 
 
-   wget (https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.98/bin/apache-tomcat-9.0.98.zip)
+   wget (https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.98/bin/apache-tomcat-9.0.98.zip) 
+
    ls
+
    unzip apache-tomcat-9.0.98.zip 
 
 ### Step 5:  copy student.war file in webapps  & copy mysql-coonector.jar file in lib
@@ -68,12 +78,14 @@
 
  - SYNTAX: cp mysql-coonector.jar apache-tomcat-9.0.98/lib 
 
-   cd apache-tomcat-9.0.98/bin
+   cd apache-tomcat-9.0.98/bin 
+
    ./catalina.sh start     //not start tomcat server then you can give the permission for this service 
    
    chmod 700 catalina.sh
 
    cd apache-tomcat-9.0.98/bin 
+   
    ./catalina.sh start 
 
 
