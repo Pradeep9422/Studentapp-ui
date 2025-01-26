@@ -11,7 +11,7 @@
 
 ## Practicle Commands 
 
--  Step 1: Set Up MariaDB
+### Step 1: Set Up MySql
 
    search google (mysql download) go to mysql communicaty download > mysql yum repository > copy link address.
 
@@ -38,7 +38,7 @@
    {TO PROVIDE FILE IN (student.sql) COPY DATA ALL PASTE mysql> here } 
    // exit 
 
-   2) Confiuration 
+### Step 2: Change Configuration
 
    cd apache-tomcat-9.0.98/Conf
    vim context.xml 
@@ -49,24 +49,24 @@
                username="USERNAME" password="PASSWORD" driverClassName="com.mysql.jdbc.Driver"
                url="jdbc:mysql://DB-ENDPOINT:3306/DATABASE"/>
 
-/// (CHANGES THIS FILE )  Username --> root   password --> Admin@1234    DATABASE --> student (change names)
+* (CHANGES THIS FILE ) Username --> root  password --> Admin@1234    DATABASE --> student (change names)
 
-- Install Java (OpenJDK 1.8)
+### Step 3:  Install Java (OpenJDK 1.8)
 
    dnf install java-17-amazon-corretto-devel -y
    java --version
 
-- Install Apache Tomcat 8 
+### Step 4:  Install Apache Tomcat 8 
 
    wget (https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.98/bin/apache-tomcat-9.0.98.zip)
    ls
    unzip apache-tomcat-9.0.98.zip 
 
-- copy student.war file in webapps  & copy mysql-coonector.jar file in lib
+### Step 5:  copy student.war file in webapps  & copy mysql-coonector.jar file in lib
 
-   SYNTAX : cp student.war apache-tomcat-9.0.98/webapps 
+ - SYNTAX : cp student.war apache-tomcat-9.0.98/webapps 
 
-   SYNTAX: cp mysql-coonector.jar apache-tomcat-9.0.98/lib 
+ - SYNTAX: cp mysql-coonector.jar apache-tomcat-9.0.98/lib 
 
    cd apache-tomcat-9.0.98/bin
    ./catalina.sh start     //not start tomcat server then you can give the permission for this service 
@@ -76,13 +76,14 @@
    cd apache-tomcat-9.0.98/bin 
    ./catalina.sh start 
 
-*  ADD Port 8080 and 3306 
+
+* ADD Port 8080 and 3306 
 
 {HIT IP }
 -------->    http://(ip-address):8080/student       <---------
 
 // after you fill the form you can see also backend data , go through mysql databse and hit the query 
  
-  SELECT * FROM <table_name>;
+- SELECT * FROM <table_name>;
 
-you can show your tables list in data  
+you can show your tables list in data.
