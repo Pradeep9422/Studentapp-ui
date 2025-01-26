@@ -66,8 +66,9 @@
 
    * (GO LINE NO. 21 and PASTE) 
 
-     vim context.xml
-			<Resource name="jdbc/TestDB" auth="Container" type="javax.sql.DataSource"
+ vim context.xml
+ 
+		<Resource name="jdbc/TestDB" auth="Container" type="javax.sql.DataSource"
                maxTotal="100" maxIdle="30" maxWaitMillis="10000"
                username="USERNAME" password="PASSWORD" driverClassName="com.mysql.jdbc.Driver"
                url="jdbc:mysql://DB-ENDPOINT:3306/DATABASE"/>
@@ -77,7 +78,7 @@
 ### Step 3:  Install Java (OpenJDK 1.8)
 
    dnf install java-17-amazon-corretto-devel -y 
-   
+
    java --version
 
 ### Step 4:  Install Apache Tomcat 8 
