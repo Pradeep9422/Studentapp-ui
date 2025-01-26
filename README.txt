@@ -1,7 +1,7 @@
-StudentWebApp  Deploy  On Aws (linux)
+StudentWebApp  Deploy  On Aws
 Using tomcatserver (mysql)
 
-    ** REQUIREMENTS **
+    #REQUIREMENTS#
 
 1) Web Application           --> Student 
 2) Web Application WAR file  --> Student.war
@@ -10,7 +10,7 @@ Using tomcatserver (mysql)
 5)Tomcat(9)                -> Apache tomcat 
 
 
-      ** Practicle Command **
+      #Practicle Command #
 
 
  Step 1: Set Up MariaDB
