@@ -46,7 +46,7 @@
 
    this data copy & paste 
 
-   mysql > CREATE TABLE if not exists students(student_id INT NOT NULL AUTO_INCREMENT,
+mysql > CREATE TABLE if not exists students(student_id INT NOT NULL AUTO_INCREMENT,
 	student_name VARCHAR(100) NOT NULL,
     student_addr VARCHAR(100) NOT NULL,
 	student_age VARCHAR(3) NOT NULL,
@@ -67,7 +67,7 @@
    * (GO LINE NO. 21 and PASTE) 
 
  vim context.xml
- 
+
 		<Resource name="jdbc/TestDB" auth="Container" type="javax.sql.DataSource"
                maxTotal="100" maxIdle="30" maxWaitMillis="10000"
                username="USERNAME" password="PASSWORD" driverClassName="com.mysql.jdbc.Driver"
