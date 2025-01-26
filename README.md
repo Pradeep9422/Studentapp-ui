@@ -79,7 +79,7 @@
 *  ADD Port 8080 and 3306 
 
 {HIT IP }
--------->    http://<ip-address>:8080/student     <-------------
+-------->    http://(ip-address):8080/student       <---------
 
 // after you fill the form you can see also backend data , go through mysql databse and hit the query 
  
