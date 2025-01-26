@@ -42,15 +42,30 @@
 
    use database; //command RUN 
 
-   {TO PROVIDE FILE IN (student.sql) COPY DATA ALL PASTE mysql> here } 
+   {TO PROVIDE FILE IN (student.sql) COPY DATA ALL PASTE } 
+
+   this data copy & paste 
+
+   mysql > CREATE TABLE if not exists students(student_id INT NOT NULL AUTO_INCREMENT,
+	student_name VARCHAR(100) NOT NULL,
+    student_addr VARCHAR(100) NOT NULL,
+	student_age VARCHAR(3) NOT NULL,
+	student_qual VARCHAR(20) NOT NULL,
+	student_percent VARCHAR(10) NOT NULL,
+	student_year_passed VARCHAR(10) NOT NULL,
+	PRIMARY KEY (student_id)
+);
 
    // exit 
 
 ### Step 2: Change Configuration
 
-   cd apache-tomcat-9.0.98/Conf
+   cd apache-tomcat-9.0.98/Conf 
+
    vim context.xml 
-    //(GO LINE NO. 21 and PASTE)
+
+   * (GO LINE NO. 21 and PASTE) 
+
      vim context.xml
 			<Resource name="jdbc/TestDB" auth="Container" type="javax.sql.DataSource"
                maxTotal="100" maxIdle="30" maxWaitMillis="10000"
@@ -61,7 +76,8 @@
 
 ### Step 3:  Install Java (OpenJDK 1.8)
 
-   dnf install java-17-amazon-corretto-devel -y
+   dnf install java-17-amazon-corretto-devel -y 
+   
    java --version
 
 ### Step 4:  Install Apache Tomcat 8 
@@ -85,7 +101,7 @@
    chmod 700 catalina.sh
 
    cd apache-tomcat-9.0.98/bin 
-   
+
    ./catalina.sh start 
 
 
