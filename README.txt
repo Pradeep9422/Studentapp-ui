@@ -1,7 +1,7 @@
-StudentWebApp  Deploy  On Aws
-Using tomcatserver (mysql)
 
-    #REQUIREMENTS#
+# StudentWebApp Deploy On AWS
+
+   ##REQUIREMENTS 
 
 1) Web Application           --> Student 
 2) Web Application WAR file  --> Student.war
