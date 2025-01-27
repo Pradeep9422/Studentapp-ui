@@ -27,7 +27,8 @@
    
    cat /var/log/mysqld.log | grep 'password'             //to show the mysqld password copy password 
 
-   mysql -u root -p(paste password)
+   mysql -u root -p
+   Enter password: (paste password)
  
    select version();
 
