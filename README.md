@@ -1,7 +1,7 @@
 
 # StudentWebApp Deploy On AWS
 
-##     REQUIREMENTS
+##  PREREQUISITES
 
 1) Web Application           --> Student 
 2) Web Application WAR file  --> Student.war
